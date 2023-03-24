@@ -56,6 +56,3 @@ bond_strength_long %>%
 
 
 
-
-
-
