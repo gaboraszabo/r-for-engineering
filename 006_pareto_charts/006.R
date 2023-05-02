@@ -1,3 +1,5 @@
+# WEEK 006: PRIORITIES, PRIORITIES - PARETO CHARTS
+
 # 0. LIBRARIES
 library(tidyverse)
 library(sherlock)
