@@ -42,9 +42,9 @@ auto_recalls %>%
 
 # 2.3 GROUPED PARETO FOR NUMBER OF RECALLS BY TYPE OF COMPONENT GROUPED BY TYPE OF RECALL, 1966-2023 ----
 auto_recalls %>%
-  draw_pareto_chart_grouped(cat_var = Component,
+  draw_pareto_chart_grouped(cat_var      = Component,
                             grouping_var = `Recall Type`,
-                            summarize = TRUE,
+                            summarize    = TRUE,
                             highlight_first_n_items = 1)
 
 # 2.4 GROUPED PARETO FOR NUMBER OF VEHICLES POTENTIALLY AFFECTED BY TYPE OF COMPONENT GROUPED BY TYPE OF RECALL, 1966-2023 ----
