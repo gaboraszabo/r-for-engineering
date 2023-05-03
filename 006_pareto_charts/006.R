@@ -1,6 +1,10 @@
 # WEEK 006: PRIORITIES, PRIORITIES - PARETO CHARTS
 
 # 0. LIBRARIES
+
+# install.packages("devtools")
+devtools::install_github("gaborszabo11/sherlock")
+
 library(tidyverse)
 library(sherlock)
 
