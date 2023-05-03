@@ -36,7 +36,8 @@ auto_recalls %>%
                     summarize = TRUE,
                     highlight_first_n_items = 1,
                     lump_last_n_items       = 20,
-                    lumped_cat_name = "Other Components")
+                    lumped_cat_name         = "Other Components", 
+                    title_label             = "NHTSA Automobile Recalls, 1966-2023")
 
 
 # 2.3 GROUPED PARETO FOR NUMBER OF RECALLS BY TYPE OF COMPONENT GROUPED BY TYPE OF RECALL, 1966-2023 ----
