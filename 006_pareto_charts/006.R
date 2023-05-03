@@ -45,7 +45,8 @@ auto_recalls %>%
   draw_pareto_chart_grouped(cat_var      = Component,
                             grouping_var = `Recall Type`,
                             summarize    = TRUE,
-                            highlight_first_n_items = 1)
+                            highlight_first_n_items = 1, 
+                            title_label  = "NHTSA Automobile Recalls, 1966-2023")
 
 # 2.4 GROUPED PARETO FOR NUMBER OF VEHICLES POTENTIALLY AFFECTED BY TYPE OF COMPONENT GROUPED BY TYPE OF RECALL, 1966-2023 ----
 auto_recalls %>%
@@ -53,10 +54,12 @@ auto_recalls %>%
   summarize(Sum_Potentially_Affected = sum(`Potentially Affected`)) %>%
   drop_na() %>%
   draw_pareto_chart_grouped(cat_var = Component,
-                            grouping_var = `Recall Type`,
-                            summarize = FALSE,
+                            grouping_var   = `Recall Type`,
+                            summarize      = FALSE,
                             continuous_var = Sum_Potentially_Affected,
-                            highlight_first_n_items = 1)
+                            highlight_first_n_items = 1, 
+                            title_label    = "NHTSA Automobile Recalls by Component by Recall Type, 1966-2023", 
+                            analysis_desc_label = "Number of vehicles potentially affected")
 
 
 # 2.4.1 FIXED X AXIS FOR COMPARISON ----
@@ -69,6 +72,8 @@ auto_recalls %>%
                             summarize = FALSE,
                             continuous_var = Sum_Potentially_Affected,
                             x_axis_span = "fixed",
-                            highlight_first_n_items = 1)
+                            highlight_first_n_items = 1, 
+                            title_label    = "NHTSA Automobile Recalls by Component by Recall Type, 1966-2023", 
+                            analysis_desc_label = "Number of vehicles potentially affected")
 
 
