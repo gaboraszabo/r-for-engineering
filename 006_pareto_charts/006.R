@@ -18,14 +18,16 @@ auto_recalls
 
 # 2.1 PARETO CHART FOR NUMBER OF RECALLS BY TYPE OF COMPONENT, 1966-2023 ----
 auto_recalls %>%
-  draw_pareto_chart(cat_var = Component, summarize = FALSE)
+  draw_pareto_chart(cat_var = Component, summarize = TRUE)
 
 auto_recalls <- auto_recalls %>%
   mutate(Component = Component %>% str_to_title())
 
 
 auto_recalls %>%
-  draw_pareto_chart(cat_var = Component, summarize = TRUE)
+  draw_pareto_chart(cat_var     = Component, 
+                    summarize   = TRUE, 
+                    title_label = "NHTSA Automobile Recalls, 1966-2023")
 
 
 # 2.2 PARETO CHART FORMATTED ----
