@@ -5,6 +5,7 @@
 # install.packages("devtools")
 devtools::install_github("gaborszabo11/sherlock")
 
+ 
 library(tidyverse)
 library(sherlock)
 
@@ -17,7 +18,7 @@ auto_recalls
 
 # 2.1 PARETO CHART FOR NUMBER OF RECALLS BY TYPE OF COMPONENT, 1966-2023 ----
 auto_recalls %>%
-  draw_pareto_chart(cat_var = Component, summarize = TRUE)
+  draw_pareto_chart(cat_var = Component, summarize = FALSE)
 
 auto_recalls <- auto_recalls %>%
   mutate(Component = Component %>% str_to_title())
