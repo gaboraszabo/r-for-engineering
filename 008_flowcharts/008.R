@@ -35,7 +35,8 @@ ggflowchart(data = search_tree, text_size = 3.5,
 
 # 2 FUNCTION TO CREATE SIMPLE FLOWCHARTS ----
 
-draw_flowchart <- function(steps, category = NULL, horizontal = TRUE, chart_title = "") {
+draw_flowchart <- function(steps, category = NULL, horizontal = TRUE, chart_title = "", 
+                           x_nudge = 0.1, y_nudge = 0.25) {
     
     process_steps <- steps
     
@@ -59,7 +60,7 @@ draw_flowchart <- function(steps, category = NULL, horizontal = TRUE, chart_titl
         
     } else {
         flowchart <- ggflowchart(process_flow_tbl, node_data = nodes, fill = type, horizontal = horizontal, 
-                                 x_nudge = 0.1) +
+                                 x_nudge = x_nudge, y_nudge = y_nudge) +
             scale_fill_sherlock()  
     }
     
