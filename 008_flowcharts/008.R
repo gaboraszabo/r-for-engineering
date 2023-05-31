@@ -12,7 +12,14 @@ library(ggflowchart)
 
 # 1. GGFLOWCHART() FUNCTION ----
 
-# 1.1 DECISION TREE EXAMPLE ----
+# 1.1 A SIMPLE EXAMPLE ----
+simple_flow <- tibble(from = c("Step 1", "Step 2"),
+                      to   = c("Step 2", "Step 3"))
+
+ggflowchart(data = simple_flow)
+
+
+# 1.2 DECISION TREE EXAMPLE ----
 search_tree <- tibble(from = c(rep("What drives variation in bond strength?", times = 2), 
                                "Higher family group", "Higher family group", 
                                "Higher family group ", "Higher family group "), 
